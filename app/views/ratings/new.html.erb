@@ -1,0 +1,34 @@
+<h1>How would you rate your experience at <i>"The Fast Food Restaurant"</i>?</h1>
+
+<%= form_with(model: @rating) do |form| %>
+<table>
+    <td>
+        <%= form.radio_button :rating, 0 %>
+            <%= form.label "I'd be more satisfied 6 feet under!" %>
+    </td>
+    <td>
+        <%= form.radio_button :rating, 1 %>
+            <%= form.label "I hope I don't eat here again!" %>
+    </td>
+    <td>
+        <%= form.radio_button :rating, 2 %>
+            <%= form.label "I am neither satisfied nor dissatisfied." %>
+    </td>
+    <td>
+        <%= form.radio_button :rating, 3 %>
+            <%= form.label "I would probably eat here again!" %>
+    </td>
+    <td>
+        <%= form.radio_button :rating, 4 %>
+            <%= form.label "I'm over the moon satisfied!" %>
+    </td>
+    </table>
+    <div>
+        <%= form.label "Please tell us why you chose that rating"%>
+        <%= form.text_area :elaborations %>
+        </div>
+
+<div>
+    <%= form.submit %>
+</div>
+<% end %>

@@ -1,0 +1,8 @@
+<h1>Thank you for your interest in completing this fast food survey.
+    </br>This page intentionally blank.</h1>
+
+            <% @ratings.each do |rating| %>
+        <h1><%= rating.rating %></h1>
+<% end %>
+
+    <%= link_to "Participate in our Fast Food Satisfaction Survey", new_rating_path %>
